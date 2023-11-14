@@ -14,4 +14,21 @@ export class NavbarComponent {
   handleClick() {
     this.click = !this.click;
   }
+
+  toHome() {
+    document.getElementById("home")?.scrollIntoView({behavior:"smooth"});
+  }
+
+  toFeatured() {
+    document.getElementById("featured")?.scrollIntoView({behavior:"smooth"});
+  }
+
+  toEarn() {
+    document.getElementById("earn")?.scrollIntoView({behavior:"smooth"});
+  }
+
+  toContact() {
+    document.getElementById("contact")?.scrollIntoView({behavior:"smooth"});
+  }
 }
+

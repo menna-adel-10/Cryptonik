@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
-  --primary: #118c4f;
+  --primary: #219ebc;
   --background: #f5f8ff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .primary {
@@ -106,4 +110,15 @@ input {
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }

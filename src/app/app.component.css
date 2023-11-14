@@ -1,0 +1,19 @@
+.my-element {
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.my-element.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.my-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax-container {
+  height: 100%; /* Adjust the height as per your requirement */
+  position: relative;
+  overflow: hidden;
+}

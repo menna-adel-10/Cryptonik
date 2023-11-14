@@ -1,4 +1,4 @@
-<div class="featured">
+<div id="featured" class="featured">
   <div class="container">
     <div class="left">
       <h2>Explore top Crypto's Like Bitcoin, Ethereum, and Dogecoin</h2>
@@ -7,54 +7,11 @@
     </div>
 
     <div class="right">
-      <div class="card">
+      <div class="card" *ngFor="let item of data">
         <div class="top">
-        <img src="assets/btc-img.png" alt="">
-    <h5>Bitcoin</h5>
-    <p>$46,674</p>
+        <img src="{{item.image}}" alt="">
+    <h5>{{item.name}}</h5>
+    <p>€{{item.current_price}}</p>
   </div>
-  <span class="green"><fa-icon class="icon" [icon]="faArrowUp"></fa-icon>2.5%</span>
+  <span class="green? : red"><fa-icon class="icon" [icon]="faArrowUp || faArrowDown"></fa-icon>{{item.price_range}}</span>
  </div>
-      <div class="card">
-        <div class="top">
-        <img src="assets/btc-img.png" alt="">
-    <h5>Bitcoin</h5>
-    <p>$46,674</p>
-  </div>
-  <span class="red"><fa-icon class="icon" [icon]="faArrowDown"></fa-icon>-3.77%</span>
- </div>
-      <div class="card">
-        <div class="top">
-        <img src="assets/btc-img.png" alt="">
-    <h5>Bitcoin</h5>
-    <p>$46,674</p>
-  </div>
-  <span class="red"><fa-icon class="icon" [icon]="faArrowDown"></fa-icon>-2.66%</span>
- </div>
-      <div class="card">
-        <div class="top">
-        <img src="assets/btc-img.png" alt="">
-    <h5>Bitcoin</h5>
-    <p>$46,674</p>
-  </div>
-  <span class="green"><fa-icon class="icon" [icon]="faArrowUp"></fa-icon>7.2%</span>
- </div>
-      <div class="card">
-        <div class="top">
-        <img src="assets/btc-img.png" alt="">
-    <h5>Bitcoin</h5>
-    <p>$46,674</p>
-  </div>
-  <span class="red"><fa-icon class="icon" [icon]="faArrowUp"></fa-icon>-0.8%</span>
- </div>
-      <div class="card">
-        <div class="top">
-        <img src="assets/btc-img.png" alt="">
-    <h5>Bitcoin</h5>
-    <p>$46,674</p>
-  </div>
-  <span class="green"><fa-icon class="icon" [icon]="faArrowUp"></fa-icon>1.5%</span>
- </div>
-</div>
-</div>
-</div>

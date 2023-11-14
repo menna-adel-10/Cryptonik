@@ -1,18 +1,18 @@
 <div class="header">
   <div class="container">
-    <h1>De<span class="primary">Fi</span></h1>
+    <h2>Cryp<span class="primary">Tonik</span></h2>
     <ul [class]="'nav-menu ' + (click ? 'active' : '')">
       <li>
-        <a routerLink="home">Home</a>
+        <a (click)="toHome()" routerLink="/home" routerLinkActive="active">Home</a>
       </li>
       <li>
-        <a routerLink="featured">Featured</a>
+        <a (click)="toFeatured()" routerLink="/featured">Featured</a>
       </li>
       <li>
-        <a routerLink="earn">Earn</a>
+        <a (click)="toEarn()" routerLink="/earn">Earn</a>
       </li>
       <li>
-        <a routerLink="contact">Contact</a>
+        <a (click)="toContact()" routerLink="/contact">Contact</a>
       </li>
     </ul>
     <div class="btn-group">
@@ -25,5 +25,7 @@
   <ng-container *ngIf="!click">
     <fa-icon [icon]="faBars"></fa-icon>
   </ng-container>
-
     </div>
+  </div>
+  </div>
+

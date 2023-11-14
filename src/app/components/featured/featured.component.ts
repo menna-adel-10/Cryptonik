@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { FeaturedService } from 'src/app/featured.service';
+import { FeaturedService } from './featured.service';
+import { error } from '@ant-design/icons-angular';
 
 @Component({
   selector: 'app-featured',
@@ -13,22 +14,22 @@ export class FeaturedComponent implements OnInit{
   faArrowUp = faArrowUp;
   faArrowDown = faArrowDown;
 
-  coins: any[] = [];
   data: any[] = [];
   constructor(private featuredService: FeaturedService) { }
 
   ngOnInit(): void {
-    this.featuredService.getCoinData()
-      .subscribe(
-        data => {
-          this.coins = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        },
-      );
+    this.getCoinData();
   }
+
+  getCoinData() {
+    this.featuredService.getAllCoinData().subscribe((res: any) => {
+      this.data = res
+    }, error => {
+      alert(error.message);
+    })
+    
+  }
+
 }
 
 
