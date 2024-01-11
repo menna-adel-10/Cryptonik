@@ -13,5 +13,7 @@
     <h5>{{item.name}}</h5>
     <p>€{{item.current_price}}</p>
   </div>
-  <span class="green? : red"><fa-icon class="icon" [icon]="faArrowUp || faArrowDown"></fa-icon>{{item.price_range}}</span>
- </div>
+ <span [ngClass]="item.price_range ? 'green' : 'red'">
+  <fa-icon class="icon" [icon]="faArrowUp || faArrowDown"></fa-icon>{{ item.price_range }}
+</span>
+</div>

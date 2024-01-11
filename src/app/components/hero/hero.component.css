@@ -2,13 +2,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 4rem auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
 
 .hero .left {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .hero h1 {
@@ -20,17 +20,20 @@
 }
 
 .hero .right {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .hero .img-container {
   width: 100%;
   display: flex;
+
 }
 
-.hero img {
-  max-width: 80%;
+.hero-img {
+  width: 40vw;
+  height: auto;
   margin: auto;
+  
 }
 
 
